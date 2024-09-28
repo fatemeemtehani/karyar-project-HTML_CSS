@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+    margin: 12px; /* فاصله بین آیکون‌ها */
+}
+
+.gray {
+    color: #67615a;
+}
+
+.icon-name {
+    display: none; /* ابتدا متن مخفی است */
+    position: absolute;
+    top: 150%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; 
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap; /* جلوگیری از شکستن متن */
+}
+
+/* مثلث */
+.icon-name::before {
+    content: '';
+    position: absolute;
+    bottom: 100%; /* بالای مستطیل */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px; /* ضخامت مثلث */
+    border-style: solid;
+    border-color: transparent transparent #333 transparent; /* رنگ مثلث */
+}
+
+/* نمایش متن هنگام هاور */
+.icon-container:hover .icon-name {
+    display: block; 
+}
+
+    </style>
+    <title>آیکون با متن</title>
+</head>
+<body>
+
+<div class="icon-container">
+    <label for="menuToggle" class="hamburger">
+        <div class="bar">jjj</div>
+        <div class="bar">jj</div>
+        <div class="bar">llll</div>
+    </label>
+    <span class="icon-name gray">منو</span>
+</div>
+
+</body>
+</html>

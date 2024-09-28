@@ -1,0 +1,1423 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f5f6f1;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between;
+}
+.ios{
+    background-color: #fa7427;
+    color: #ffffff;
+    margin-right: 13px;
+    margin-left: 6px;
+   padding-right: 5px;
+   padding-left: 5px;
+   border-radius: 3px;
+
+}
+.menu-box{
+   text-decoration: none;
+   color: #333338;
+
+}
+nav{
+    margin-top: 30px;
+}
+.menu-text:hover {
+    color: #fa7427; 
+}
+.icon-container {
+    position: relative;
+    display: inline-block;
+    margin: 12px; /* فاصله بین آیکون‌ها */
+}
+
+.gray {
+    color: #67615a;
+}
+
+.icon-name {
+    display: none; /* ابتدا متن مخفی است */
+    position: absolute;
+    top: 150%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; 
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap; /* جلوگیری از شکستن متن */
+}
+
+/* مثلث */
+.icon-name::before {
+    content: '';
+    position: absolute;
+    bottom: 100%; /* بالای مستطیل */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px; /* ضخامت مثلث */
+    border-style: solid;
+    border-color: transparent transparent #333 transparent; /* رنگ مثلث */
+}
+
+/* نمایش متن هنگام هاور */
+.icon-container:hover .icon-name {
+    display: block; 
+
+}
+
+/* menu */
+.menu{
+    width: 45%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+
+}
+.menu ul{
+list-style: none;
+display: flex;
+
+}
+.menu ul .orange{
+    color: #fa7427;
+}
+.menu ul .orange::after {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    width: 50%;
+    bottom: -10px; /* موقعیت خط */
+    height: 1.5px; /* ضخامت خط */
+    background-color: #fa7427;
+   
+}
+
+.menu ul li{
+color: #333338;
+padding-left: 60px;
+font-size: 16px;
+}
+.menu i{
+    color: #333338;
+    font-size: 16px;
+}
+/* ........... */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    list-style-type: none; /* حذف مربع‌های کنار لیست */
+    padding: 0; /* حذف فاصله داخلی */
+    margin: 0; /* حذف فاصله خارجی */
+    display: flex; /* نمایش به صورت افقی */
+}
+
+.menu li,i {
+    position: relative; /* برای استفاده از ::after */
+    cursor: pointer; /* تغییر نشانگر ماوس */
+    transition: color 0.3s ease; /* انیمیشن تغییر رنگ */
+}
+
+.menu li::after {
+    content: ''; /* خط بعد از متن */
+    position: absolute;
+    left: 50%;
+    right: 0;
+    width: 60%;
+    bottom: -10px; /* موقعیت خط */
+    height: 1.5px; /* ضخامت خط */
+    background-color: transparent; /* رنگ پیش‌فرض خط */
+    transition: background-color 0.4s ease; /* انیمیشن تغییر رنگ خط */
+}
+
+.menu li:hover {
+    color:#fa7427;
+  
+}
+
+.menu li:hover::after {
+    background-color: #fa7427; /* رنگ خط در هاور */;
+
+}
+.menu i:hover{
+    color: #fa7427;
+}
+.menu i::after{
+    content: ''; /* خط بعد از متن */
+    position: absolute;
+    left: 0;
+    right: 100%;
+    width: 150%;
+    bottom: -10px; /* موقعیت خط */
+    height: 1.5px; /* ضخامت خط */
+    background-color: transparent; /* رنگ پیش‌فرض خط */
+    transition: b 0.7s ease; /* انیمیشن تغییر رنگ خط */
+}
+.menu i:hover::after{
+    background-color: #fa7427;
+}
+/* main */
+.main {
+    margin-top: 30px;
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background-image: url(/images/slide11-bg.jpg);
+    background-position: center center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding-bottom: 80px;
+}
+
+.main-box-orange {
+    background-color: #fa7427; 
+    color: white;
+    padding: 15px 22px;
+    font-size: 14px;
+    border-radius: 5px; 
+    margin-bottom:-25px; 
+    text-align: center; 
+    z-index: 1;
+  
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 700px;
+    height: 230px;
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 5px;
+}
+.main-text2{
+    padding-bottom: 20px;
+    font-size: 45px;
+    color: #333338;
+}
+.main-text2:hover{
+    color: #fa7427;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.main-p{
+color: #67615a;
+font-size: 17px;
+padding-bottom: 20px;
+}
+/* main bottom */
+.main-bottom{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: -85px;
+}
+.line-container {
+    padding-top: 30px;
+    display: flex;
+    align-items: center; /* مرکز کردن عمودی */
+    justify-content: center; /* مرکز کردن افقی */
+}
+.text {
+    white-space: nowrap; /* جلوگیری از شکستن متن */
+    font-size: 17px;
+    color: #333338;
+}
+
+.dotted-line {
+    flex: 1; /* اجازه می‌دهد که خط‌ها به طول 100 پیکسل کشیده شوند */
+    border-top: 1px dotted rgb(193, 189, 189); /* خط نقطه‌چین */
+    margin: 0 10px; /* فاصله از کلمه */
+    height: 1px; /* ارتفاع خط */
+    
+}
+/* ............. */
+            .main-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .section {
+                position: relative; /* برای استفاده از ::before */
+                margin: 20px;
+                overflow: hidden; /* جلوگیری از نمایش قسمت‌های اضافی */
+               width: 33.33%;
+
+            }
+    
+            .section img {
+                width:346px;
+                transition: transform 1s, opacity 1s;
+            }
+    
+            .section:hover img {
+                transform: scale(1.1); /* زوم کردن تصویر */
+                opacity: 0.8; /* کمرنگ شدن تصویر */
+            }
+    
+            .section a {
+                text-decoration: none;
+                color: #333338;
+                font-size: 20px;
+                display: block; /* برای قرار دادن لینک در یک خط جدید */
+                text-align: center;
+                margin-top: 20px;
+                transition: color 0.3s; /* انتقال نرم برای رنگ */
+            }
+    
+            .section a:hover {
+                color: #fa7427;
+            }
+    
+            .section p {
+                text-align: center;
+                font-size: 15px;
+                color: #67615a;
+                margin-top: 15px;
+            }
+            /* ......................... */
+        .section-text-bottome{
+            text-align: center;
+            background-color:#f5f6f1;
+            margin-top: 120px;
+            margin-bottom: 60px;
+        }
+
+        .section-text-bottome h3{
+            color: #333338;
+            font-size: 17px;
+            margin-bottom: 20px;
+            
+        }
+        .section-text-bottome p{
+            color: #67615a;
+            font-size: 17px;    
+        line-height: 1.5;  
+      }
+      /* ............................... */
+      .foods {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        position: relative; /* برای قرار دادن باکس‌ها در موقعیت نسبی */
+    }
+    
+    .food-left {
+        width: 47.6%;
+        height: 750px;
+        background-color: #ffffff;
+        transition: transform 0.3s; /* انتقال نرم */
+    }
+
+    
+    .food-right {
+        width: 48%;
+        height: 750px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 0;
+    }
+    .image-container {
+        display: flex;
+        position: relative;
+        width: 50%; 
+        height: 238px;
+        margin-bottom: 20px;
+        overflow: hidden; /* جلوگیری از نمایش عناصر خارج از محدوده */
+    }
+
+    .image-container img{
+        width: 100%;
+        display: block;
+        flex-wrap: wrap;
+    }
+    .food-left:hover {
+            transform: scale(1.05); /* بزرگ‌نمایی برای جلو آمدن */
+       
+    }
+    
+    .food-left img {
+        width: 100%;
+        background-size: cover;
+        margin-bottom: 20px;
+    }
+    
+    .food-left a {
+        text-decoration: none;
+        color: #333338;
+        font-size: 22px;
+    }
+    
+    .food-left a h3 {
+        margin-left: 20px;
+    }
+    
+    .food-left a h3:hover {
+        color: #fa7427;
+        cursor: pointer;
+    }
+    
+    .food-left p {
+        color: #67615a;
+        font-size: 17px;
+        margin-top: 20px;
+        margin-left: 20px;
+        line-height: 1.5;
+    }
+    
+    .food-left hr {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        color:#f5f6f1;
+    }
+    
+    .food-left button {
+        width: 140px;
+        height: 43px;
+        background-color: #fa7427; 
+        color: #ffffff;
+        border: none; 
+        border-radius: 2px; 
+        margin-top: 20px;
+        margin-left: 20px;
+        box-shadow: none; 
+        cursor: pointer; 
+    }
+    /* right */
+    .image-end{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .food-right img{
+        width: 100%;
+        height: 260px;
+        background-position: center;
+        background-size: cover;
+      padding-bottom: 20px;
+    }
+/* .............................. */
+.foodstuffs {
+
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.foodstuff1 {
+    padding-top: 20px;
+    margin-top: 30px;
+    width: 23%;
+    height: 170px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foodstuff-text {
+    width: 95%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: 14px;
+    color: #333338;
+}
+.foodstuff-text:hover {
+    background-color: #fa7427;
+    color: #ffffff;
+}
+
+.foodstuff1 img {
+    width: 96px;
+    height: 96px;
+    transition: transform 0.3s; /* زمان انتقال برای عکس */
+}
+
+.foodstuff1:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* سایه برای ایجاد اثر عمق */
+}
+
+.foodstuff1 img:hover {
+    transform: scale(1.1); /* بزرگ‌نمایی فقط عکس */
+}
+/* ........................... */
+.foodstuff-bottom-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+}
+.foodstuff-bottom-text-left{
+    width: 50%;
+}
+.foodstuff-bottom-text-left h2{
+    font-size: 17px;
+    color: #333338;
+    padding-bottom: 20px;
+}
+.foodstuff-bottom-text-left p{
+    font-size: 17px;
+    color: #67615a;
+    line-height: 1.5;
+}
+.foodstuff-bottom-text-right{
+    width: 186px;
+    height: 43px;
+    text-align: center;
+    line-height: 43px;
+    background-color: #fa7427;
+    border-radius: 2px;
+    color: #ffffff;
+}
+.foodstuff-bottom-text-right:hover{
+     background-color: #f16819;
+     cursor: pointer;
+}
+.foodstuff-bottom-text-right span{
+    font-size: 14px;
+    padding-right: 5px;
+}
+/* ..................... */
+.food-corner{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    height: 950px;
+}
+.food-corner-left{
+    width: 62%;
+    height: 870px;
+    transition: transform 0.3s;
+    background-color: #ffffff;
+}
+.food-corner-left:hover{
+    transform: scale(1.05); 
+}
+
+    .food-corner-left img{
+        width: 100%;
+        background-size: cover;
+        margin-bottom: 20px;
+    }   
+
+.food-corner-left a {
+    text-decoration: none;
+    color: #333338;
+    font-size: 22px;
+}
+
+.food-corner-left a h4 {
+    margin-left: 20px;
+}
+
+.food-corner-left a h4:hover {
+    cursor: pointer;
+}
+
+.food-corner-admin{
+    color:#333338;
+        font-size: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+.food-corner-text{
+    color:#67615a;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+
+.food-corner-left h4 {
+    color:#333338;
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 17px;
+}
+.food-corner-left hr{
+    color: black;
+    width: 85px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.food-corner-right{
+    width: 33%;
+    height: 950px;
+
+
+}
+.food-corner-right1{
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+    padding-top: 175px;
+    width: 100%;
+    height: 450px;
+    background-image: url(/images/ad-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.city-guid{
+    background-image: url(/images/singapore-featured-image-800x527.jpg);
+    width: 100%;
+    height: 245px;
+    background-size: cover;
+    margin-top: 50px;
+}
+.city-guid h2{
+    background-color: #1e1308d4;
+    height: 55px;
+    line-height: 55px;
+    color: #ffffff;
+    font-size: 24px;
+    padding-left: 15px;
+}
+.city-guid-text{
+    width: 80%;
+    padding-top: 140px;
+
+}
+.city-guid-bottom{
+display: flex;
+color: #ffffff;
+ background-color: #fa7427;
+ width: 100%;
+ height: 48px;
+ text-align: center;
+ padding-top: 16px;
+ padding-left: 90px;
+ font-size: 15px;
+}
+.city-guid-bottom:hover{
+    background-color: #f16819;
+    cursor: pointer;
+}
+.city-guid-bottom i{
+    padding-right: 5px;
+}
+.food-corner-right hr{
+    margin-top: 30px;
+    color: #dcdbda;
+    height: 1px;
+}
+/* .................... */
+.search-box {
+    margin-top: 40px;
+    display: flex;
+}
+
+.search-box button {
+    width: 56px;
+    height: 56px;
+    background-color: #ffffff;
+    border: 2px solid #c1c3c3;
+    border-right: none;
+    border-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.search-box button i {
+    color: #c1c3c3;
+    font-size: 17px;
+}
+
+.search-box input {
+    font-size: 20px;
+    color: #c1c3c3;
+    width: 85%;
+    height: 56px;
+    border: 2px solid #c1c3c3;
+    border-left: none;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* جلوگیری از تغییر رنگ در حالت فوکوس */
+.search-box input:focus {
+    outline: none; /* حذف outline پیش‌فرض */
+    border-color: #c1c3c3; 
+    background-color: #ffffff; 
+}
+/* ....................... */
+.foods-item{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0  auto;
+    margin-bottom: 50px;
+
+
+}
+.food-item-left{
+    width: 62%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item{
+background-color: #ffffff;
+width: 48%;
+position: relative; /* برای استفاده از ::before */
+overflow: hidden; /* جلوگیری از نمایش قسمت‌های اضافی */
+margin-bottom: 30px;
+}
+
+.item img {
+    width:100%; /* تصویر را به اندازه کامل div بکشید */
+    height: 228px; /* حفظ نسبت تصویر */
+    transition: transform 1s, opacity 1s;
+}
+
+.item:hover img {
+    transform: scale(1.1); /* زوم کردن تصویر */
+    opacity: 0.8; /* کمرنگ شدن تصویر */
+}
+
+.item a {
+    text-decoration: none;
+    color: #333338;
+    font-size: 20px;
+    display: block; /* برای قرار دادن لینک در یک خط جدید */
+    text-align: center;
+    margin-top: 20px;
+    transition: color 0.3s; /* انتقال نرم برای رنگ */
+}
+
+.item a:hover {
+    color: #fa7427; /* رنگ نارنجی هنگام هاور */
+}
+
+.item p {
+    text-align: center;
+    font-size: 15px;
+    color: #67615a;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.black{
+    color: black;
+}
+.food-item-right{
+    width: 33%;
+
+}
+.icons{
+    display: flex;
+}
+.icon{
+    position: relative;
+    display: inline-block;
+}
+.icon i{
+    margin-right: 10px;
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 36px;
+    color: #67615a;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.icon i:hover{
+    color: #908c8c;
+}
+.icon:hover .icon-name {
+    display: block; /* نمایش متن هنگام هاور */
+}
+/* .............. */
+.button-icon{
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+   
+}
+.button-icon1 ,.button-icon2{
+    border: 1px solid #d9d0d0;
+    padding: 0;
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+    margin-right: 0;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 50px;
+    color: #333338;
+    font-size: 20px;
+}
+/* .... */
+.food-circle{
+     margin-bottom: 40px;
+     display: flex;
+     align-items: center;
+   
+}
+.circle-img img{
+   margin-right: 20px;
+    width: 52px;
+    height: 52px;
+    background-size: cover;
+    border-radius: 50%;
+}
+.circle-text a{
+    font-size: 17px;
+    color: #333338;
+}
+.circle-text p{
+    margin-top: 10px;
+    font-size:15px;
+    color: #67615a;
+}
+
+/* ........................ */
+
+
+
+
+.image {
+    width: 100%; /* تصویر تمام عرض جعبه */
+    display: block; /* جلوگیری از فاصله‌های اضافی */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #f16819, rgba(255, 165, 0, 0)); /* طیف رنگی نارنجی */
+    opacity: 0; /* باکس در ابتدا نامرئی است */
+    transform: rotate(10deg) translateY(5%); /* کج کردن و خارج کردن باکس */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* انیمیشن برای صاف شدن و ظاهر شدن */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* باکس هنگام هاور نمایان می‌شود */
+    transform: rotate(0deg) translateY(0); /* صاف شدن و ورود باکس هنگام هاور */
+}
+
+.matn{
+    color: white;
+    font-size: 15px; /* اندازه فونت */
+    position: absolute;
+    top: 50%; /* مرکز کردن عمودی متن */
+    left: 50%; /* مرکز کردن افقی متن */
+    transform: translate(-40%, -40%); 
+}
+/* ..... */
+.subscribe{
+    width: 100%;/
+    background-color:rgb(255, 255, 255);
+    padding-top: 120px;
+}
+.subscribe h3{
+   font-size: 35px;
+    text-align: center;
+    color: #333338;
+}
+.orange{
+    color: #f16819;
+}
+.subscribe-text2{
+    padding-top: 35px;
+    font-size: 14px;
+    color: #67615a;
+    text-align: center;
+
+}
+.subscribe-text1{
+    color: #67615a;
+    font-size: 17px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    line-height: 2;
+}
+.email-box{
+    display: flex;
+    justify-content: center;
+}
+
+.email-box input{
+
+    border: 2px solid #c1c3c3;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 463px;
+    height: 56px;
+    color: #c1c3c3;
+}
+.email-box input:hover{
+    border: none;
+    border: 2px solid #fc7523;
+}
+.email-box button{
+    width: 217px;
+    height: 56px;
+    background-color: #fc7523;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+   margin-left: 20px;
+}
+/* ...................... */
+.pictures{
+    width: 100%;
+    display: flex;
+}
+.picture{
+    display: flex;
+    position: relative;
+    overflow: hidden; 
+    width: 25%;
+    margin-top: 50px;
+}
+.picture img{
+    width:100%;
+    height: 331px;
+    display: block;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #f16819, rgba(255, 165, 0, 0)); /* طیف رنگی نارنجی */
+    opacity: 0; /* باکس در ابتدا نامرئی است */
+    transform: rotate(10deg) translateY(5%); /* کج کردن و خارج کردن باکس */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* انیمیشن برای صاف شدن و ظاهر شدن */
+}
+
+.picture:hover .overlay {
+    opacity: 1; /* باکس هنگام هاور نمایان می‌شود */
+    transform: rotate(0deg) translateY(0); /* صاف شدن و ورود باکس هنگام هاور */
+}
+
+.matn{
+    color: white;
+    font-size: 15px; /* اندازه فونت */
+    position: absolute;
+    top: 50%; /* مرکز کردن عمودی متن */
+    left: 50%; /* مرکز کردن افقی متن */
+    transform: translate(-40%, -40%); 
+}
+/* .......................... */
+.section-end{
+    padding-top: 60px;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+    margin-bottom: 50px;
+   padding-left: 120px;
+   padding-right: 120px;
+ padding-bottom: 60px;
+}
+.gray2{
+    color:  #67615a;
+    display: flex;
+}
+.icon-container2{
+    padding-right: 30px;
+}
+.logo-icons{
+    width: 25%;
+    font-display: flex;
+    flex-direction: column;
+
+}
+.logo-icons img{
+    width: 192px;
+    height: 83px;
+    margin-bottom: 40px;
+}
+.icon1{
+    font-size: 22px;
+}
+/* ......................... */
+.menu-end{
+    width: 25%;
+}
+.menu-end ul{
+   list-style: none;
+}
+.menu-end ul a li{
+    margin-bottom: 29px;
+    color: #161616;
+    font-size: 16px;
+}
+.menu-end ul a li:hover{
+    color: #f16819;
+    cursor: pointer;
+}
+/* ...................... */
+.etelaat{
+    width: 25%;
+  
+}
+.etelaat h3{
+    font-size: 22px;
+    color: #fc7523;
+    margin-bottom: 15px;
+}
+.location{
+   
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    line-height: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+}
+.location-text{
+    font-size: 17px;
+    color: #67615a;
+    margin-left: 20px;
+
+}
+.location i{
+    color: #f16819;
+}
+
+
+.phone{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+}
+.phone i{
+color: #f16819;
+}
+.map-line{
+    color: #f16819;
+}
+
+ .etelaat hr {
+    border: none; 
+    height: 1px; 
+    background-color: #d9d0d0; /* رنگ سبز */
+  width: 90%;
+}
+/* ............................ */
+.our-app{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.our-app h3{
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #fc7523;
+}
+.our-app img{
+    width: 158px;
+    height: 51px;
+    margin-bottom: 20px;
+}
+/* ......... */
+footer{
+  
+    width: 100%;
+    height: 84px;
+    background-color: #f5f6f1;
+}
+footer span{
+    color: #333338
+}
+footer p{
+    color: #67615a;
+    font-size: 13px;
+    text-align: center;
+    line-height: 84px;
+}
+footer span:hover{
+color: #fc7523;
+cursor: pointer;
+}
+
+/* for tablet */
+
+@media(max-width:1023px){
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+    }
+    .menu{
+        display: none;
+    }
+    .main-text {
+        width: 531px;
+        height: 213px;
+    }
+.main-text2{
+    font-size: 41px;
+}
+.section img {
+    width:189px; 
+    height: 124px;
+    transition: transform 1s, opacity 1s;
+    margin: 0;
+}
+.section a {
+    font-size: 14px;
+    margin: 0;
+}
+.section p {
+    text-align: center;
+    font-size: 12px;
+    color: #67615a;
+  
+}
+.section-text-bottome h3{
+    font-size: 16px;
+}
+.foods {
+    width: 90%;
+    margin: 0 auto;
+    display:block;
+  
+    position: relative; /* برای قرار دادن باکس‌ها در موقعیت نسبی */
+}
+
+.food-left {
+    width: 100%;
+    height: 840px;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+}
+.food-right{
+    width: 100%;
+}
+.foodstuffs{
+    width: 90%;
+    margin: 0 auto;
+}
+.foodstuff-bottom-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.foodstuff-bottom-text-left{
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.foodstuff-bottom-text-left h2{
+    font-size: 23px;
+    color: #333338;
+    padding-bottom: 25px;
+}
+.foodstuff-bottom-text-left p{
+    text-align: center;
+    font-size: 17px;
+    color: #67615a;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+.food-corner{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    height: 950px;
+}
+
+/* ............. */
+.foods-item{
+  
+    position:none;
+}
+.food-corner {
+    height: auto;
+    display: block;
+   /* overflow: hidden; */
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+
+.food-corner-left {
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    margin-bottom: 60px;
+    padding-bottom: 50px;
+}
+
+.food-corner-right {
+    width: 100%;
+    height: auto; 
+
+}
+.food-corner-right1{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 28px;
+
+}
+.city-guid{
+    width: 50%;
+}
+.city-guid-bottom{
+    width: 100%;
+    margin: 0 auto;
+
+}
+.city-guid-bottom h4{
+    text-align: center;
+
+}
+.search-box{
+width: 100%;
+margin: 50px auto;
+}
+.foods-item{
+    display: flex;
+    flex-direction: column;
+}
+.food-item-left{
+width: 100%;
+}
+.food-item-right{
+    width: 100%;
+}
+.item{
+ width: 48%;
+}
+.email-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.email-box input{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.email-box button{
+    width: 80%;
+    margin:  0 auto;
+   
+}
+.subscribe-text2{
+    margin-bottom: 70px;
+}
+.pictures{
+    display: flex;
+    flex-wrap: wrap;
+}
+.picture{
+    width: 49%;
+   margin: 0;
+}
+.section-end{
+    width: 100%;
+    padding: 0;
+    padding-top: 60px;
+}
+.logo-icons img{
+    width: 158px;
+    height: 68px;
+   
+}
+.gray{
+    display: flex;
+
+}
+.icon-container2 i{
+    padding-right: 14px;
+    font-size: 22px;
+
+}
+
+}
+
+/* mobile */
+@media(max-width:767px){
+    .menu-box{
+        display: none;
+    }
+    .icon-container{
+        display: none;
+    }
+    .main{
+     background-position: center top;
+     background-size: cover;
+    }
+    .main-text2{
+        width: 375px;
+        height: 221px;
+        font-size: 35px;
+       padding-top: 80px;
+    }
+    .main-p{
+        padding-top: 0;
+        margin-bottom: 90px;
+    }
+  .text{
+    font-size: 25px;
+  }
+  .main-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.section{
+    margin: 20px;
+    overflow: hidden; /* جلوگیری از نمایش قسمت‌های اضافی */
+     width: 100%;
+
+}
+
+.section img {
+    padding-left: 60px;
+    width: 80%;
+    margin: 0 auto;
+    transition: transform 1s, opacity 1s;
+}
+.food-left{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.food-right{
+    width: 100%;
+    margin: 0 auto;
+}
+.image-container{
+    width: 100%;
+
+}
+.foodstuff1{
+    width: 48%;
+}
+.item{
+    width: 100%;
+}
+
+.subscribe h3{
+   font-size: 30px;
+}
+.subscribe p{
+    margin-left: 30px;
+}
+ .subscribe-text2{
+    margin-bottom: 30px;
+ }
+.email-box{
+    display: flex;
+    justify-content: center;
+}
+
+.email-box input{
+    width: 100%;
+}
+
+.email-box button{
+    width: 100%;
+}
+.picture{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.section-end{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.logo-icons img{
+    padding-left: 30px;
+  width: 192px;
+  height: 83px;
+}
+.icon-container2{
+    display: flex;
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+.gray{
+    display: flex;
+}
+.menu-end{
+    width: 100%;
+   padding-left: 40px;
+}
+.etelaat{
+    margin-left: 40px;
+    width: 100%;
+}
+.etelaat h3{
+    font-size: 27px;
+}
+.our-app{
+    width: 60%;
+    margin-top: 30px;
+}
+.footer{
+    width: 90%;
+    margin: 0 auto;
+}
+footer p{
+    width: 90%;
+    margin: 20px auto;
+    font-size: 13px;
+    line-height: 24px;
+}
+}
