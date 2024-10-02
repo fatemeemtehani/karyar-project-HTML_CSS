@@ -6,6 +6,9 @@
 body{
     background-color: #f5f6f1;
 }
+.humber{
+    display: none;
+}
 .container{
     width: 80%;
     margin: 0 auto;
@@ -20,12 +23,13 @@ body{
    padding-right: 5px;
    padding-left: 5px;
    border-radius: 3px;
-
 }
 .menu-box{
    text-decoration: none;
    color: #333338;
-
+}
+.logo-ris{
+    display: none;
 }
 nav{
     margin-top: 30px;
@@ -38,11 +42,9 @@ nav{
     display: inline-block;
     margin: 12px; /* فاصله بین آیکون‌ها */
 }
-
 .gray {
     color: #67615a;
 }
-
 .icon-name {
     display: none; /* ابتدا متن مخفی است */
     position: absolute;
@@ -118,15 +120,15 @@ font-size: 16px;
 }
 
 .menu ul {
-    list-style-type: none; /* حذف مربع‌های کنار لیست */
-    padding: 0; /* حذف فاصله داخلی */
-    margin: 0; /* حذف فاصله خارجی */
-    display: flex; /* نمایش به صورت افقی */
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+    display: flex;
 }
 
 .menu li,i {
     position: relative; /* برای استفاده از ::after */
-    cursor: pointer; /* تغییر نشانگر ماوس */
+    cursor: pointer;
     transition: color 0.3s ease; /* انیمیشن تغییر رنگ */
 }
 
@@ -245,7 +247,7 @@ padding-bottom: 20px;
     flex: 1; /* اجازه می‌دهد که خط‌ها به طول 100 پیکسل کشیده شوند */
     border-top: 1px dotted rgb(193, 189, 189); /* خط نقطه‌چین */
     margin: 0 10px; /* فاصله از کلمه */
-    height: 1px; /* ارتفاع خط */
+    height: 1px; 
     
 }
 /* ............. */
@@ -330,27 +332,59 @@ padding-bottom: 20px;
     
     .food-right {
         width: 48%;
-        height: 750px;
         height: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-bottom: 0;
     }
     .image-container {
-        display: flex;
         position: relative;
-        width: 50%; 
-        height: 238px;
+        width: 48%;
+        height:238px;
         margin-bottom: 20px;
-        overflow: hidden; /* جلوگیری از نمایش عناصر خارج از محدوده */
+        overflow: hidden; 
+        display: flex;
+        justify-content: space-between;
     }
-
+    
     .image-container img{
         width: 100%;
         display: block;
         flex-wrap: wrap;
+        height: 260px;
+        background-position: center;
+        background-size: cover;
     }
+    
+    .image-end{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #f16819, rgba(255, 165, 0, 0)); 
+    opacity: 0;
+    transform: rotate(-10deg) translateY(5%); /* کج کردن و خارج کردن باکس */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* انیمیشن برای صاف شدن و ظاهر شدن */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; 
+    transform: rotate(0deg) translateY(0); /* صاف شدن و ورود باکس هنگام هاور */
+}
+
+.matn{
+    color: white;
+    font-size: 15px; 
+    position: absolute;
+    top: 50%; /* مرکز کردن عمودی متن */
+    left: 50%; /* مرکز کردن افقی متن */
+    transform: translate(-40%, -40%); 
+}
     .food-left:hover {
             transform: scale(1.05); /* بزرگ‌نمایی برای جلو آمدن */
        
@@ -404,19 +438,7 @@ padding-bottom: 20px;
         box-shadow: none; 
         cursor: pointer; 
     }
-    /* right */
-    .image-end{
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-
-    .food-right img{
-        width: 100%;
-        height: 260px;
-        background-position: center;
-        background-size: cover;
-      padding-bottom: 20px;
-    }
+  
 /* .............................. */
 .foodstuffs {
 
@@ -695,8 +717,8 @@ margin-bottom: 30px;
 }
 
 .item img {
-    width:100%; /* تصویر را به اندازه کامل div بکشید */
-    height: 228px; /* حفظ نسبت تصویر */
+    width:100%; 
+    height: 228px;
     transition: transform 1s, opacity 1s;
 }
 
@@ -716,7 +738,7 @@ margin-bottom: 30px;
 }
 
 .item a:hover {
-    color: #fa7427; /* رنگ نارنجی هنگام هاور */
+    color: #fa7427; 
 }
 
 .item p {
@@ -805,42 +827,11 @@ margin-bottom: 30px;
 
 
 
-
-.image {
-    width: 100%; /* تصویر تمام عرض جعبه */
-    display: block; /* جلوگیری از فاصله‌های اضافی */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #f16819, rgba(255, 165, 0, 0)); /* طیف رنگی نارنجی */
-    opacity: 0; /* باکس در ابتدا نامرئی است */
-    transform: rotate(10deg) translateY(5%); /* کج کردن و خارج کردن باکس */
-    transition: opacity 0.4s ease, transform 0.4s ease; /* انیمیشن برای صاف شدن و ظاهر شدن */
-}
-
-.image-container:hover .overlay {
-    opacity: 1; /* باکس هنگام هاور نمایان می‌شود */
-    transform: rotate(0deg) translateY(0); /* صاف شدن و ورود باکس هنگام هاور */
-}
-
-.matn{
-    color: white;
-    font-size: 15px; /* اندازه فونت */
-    position: absolute;
-    top: 50%; /* مرکز کردن عمودی متن */
-    left: 50%; /* مرکز کردن افقی متن */
-    transform: translate(-40%, -40%); 
-}
 /* ..... */
 .subscribe{
     width: 100%;/
     background-color:rgb(255, 255, 255);
-    padding-top: 120px;
+    padding-top : 120px;
 }
 .subscribe h3{
    font-size: 35px;
@@ -931,7 +922,7 @@ margin-bottom: 30px;
 
 .matn{
     color: white;
-    font-size: 15px; /* اندازه فونت */
+    font-size: 15px; 
     position: absolute;
     top: 50%; /* مرکز کردن عمودی متن */
     left: 50%; /* مرکز کردن افقی متن */
@@ -1119,7 +1110,6 @@ cursor: pointer;
     width: 90%;
     margin: 0 auto;
     display:block;
-  
     position: relative; /* برای قرار دادن باکس‌ها در موقعیت نسبی */
 }
 
@@ -1131,6 +1121,8 @@ cursor: pointer;
 }
 .food-right{
     width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 .foodstuffs{
     width: 90%;
@@ -1179,7 +1171,6 @@ cursor: pointer;
 .food-corner {
     height: auto;
     display: block;
-   /* overflow: hidden; */
     width: 90%;
     margin: 0 auto;
 
@@ -1266,41 +1257,79 @@ width: 100%;
     width: 100%;
     padding: 0;
     padding-top: 60px;
+    display: flex;
+    justify-content: space-around;
 }
 .logo-icons img{
     width: 158px;
     height: 68px;
-   
+
 }
 .gray{
     display: flex;
 
 }
-.icon-container2 i{
-    padding-right: 14px;
-    font-size: 22px;
-
+.gray2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
+.icon-container2 i{
+    padding-right: 10px;
+    font-size: 20px;
+    padding-top: 13px;
+}
+.menu-end{
+    padding-left: 30px;
+}
 }
 
 /* mobile */
 @media(max-width:767px){
+    .logo{
+        display: none;
+    }
+    .logo-ris{
+        display: inline;
+        width: 142px;
+        height: 62px;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
     .menu-box{
         display: none;
     }
     .icon-container{
         display: none;
     }
+    .humber{
+        display:flex;
+        font-size: 35px;
+    }
+    .hamber{
+        width: 50%;
+        padding-top: 20px;
+        padding-left: 150px;
+        color: #333338;
+    }
     .main{
+        width: 100%;
      background-position: center top;
      background-size: cover;
     }
+    .main-text{
+        text-align: center;
+        width: 100%;
+    }
     .main-text2{
-        width: 375px;
-        height: 221px;
+        width: 100%;
+        text-align: center;
         font-size: 35px;
        padding-top: 80px;
+    
     }
     .main-p{
         padding-top: 0;
@@ -1319,7 +1348,7 @@ width: 100%;
 }
 .section{
     margin: 20px;
-    overflow: hidden; /* جلوگیری از نمایش قسمت‌های اضافی */
+    overflow: hidden;
      width: 100%;
 
 }
@@ -1330,10 +1359,12 @@ width: 100%;
     margin: 0 auto;
     transition: transform 1s, opacity 1s;
 }
+
 .food-left{
     width: 90%;
     margin: 0 auto;
     margin-bottom: 40px;
+    height: 750px;
 }
 
 .food-right{
@@ -1382,16 +1413,21 @@ width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 .logo-icons img{
-    padding-left: 30px;
+  padding-left: 30px;
   width: 192px;
   height: 83px;
 }
-.icon-container2{
+.gray2{
     display: flex;
-    padding-left: 40px;
+    flex-wrap: nowrap;
+}
+.icon-container2{
+    padding-left:40px;
     margin-bottom: 30px;
 }
+
 .gray{
     display: flex;
 }
@@ -1420,4 +1456,5 @@ footer p{
     font-size: 13px;
     line-height: 24px;
 }
+
 }
